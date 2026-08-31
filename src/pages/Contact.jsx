@@ -72,7 +72,7 @@ export default function Contact() {
 
             <div className="pt-4">
               <a
-                href="mailto:urtalentconsulting@gmail.com?subject=CV%20Submission%20-%20UR%20Talent%20Consulting"
+                href="mailto:urtalentlaunchera@gmail.com?subject=CV%20Submission%20-%20UR%20Talent%20Consulting"
                 className="btn-primary w-full justify-center inline-flex items-center gap-2"
               >
                 <Upload className="w-5 h-5" />

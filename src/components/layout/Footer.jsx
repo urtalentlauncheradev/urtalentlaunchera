@@ -55,7 +55,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:urtalentconsulting@gmail.com"
+                  href="mailto:urtalentlaunchera@gmail.com"
                   className="flex items-center gap-2 hover:text-brand-primary transition-colors"
                 >
                   <Mail className="w-4 h-4 flex-shrink-0" />
@@ -64,7 +64,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://www.urtalentconsulting.com"
+                  href="https://www.urtalentlaunchera.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 hover:text-brand-primary transition-colors"
