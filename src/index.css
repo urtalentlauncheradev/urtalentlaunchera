@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-gray-50 text-slate-800 font-sans antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg font-semibold
+      bg-brand-primary text-white transition-all duration-200
+      hover:bg-brand-primaryHover focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2 focus:ring-offset-white;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg font-semibold
+      border-2 border-brand-primary text-brand-primary bg-transparent transition-all duration-200
+      hover:bg-brand-primary/5 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2 focus:ring-offset-white;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg font-medium
+      text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors
+      focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2 focus:ring-offset-white;
+  }
+  .card {
+    @apply bg-brand-card border border-brand-border rounded-xl p-6 shadow-card
+      transition-all duration-200 hover:shadow-cardHover hover:border-slate-300;
+  }
+  .section-heading {
+    @apply text-2xl md:text-3xl font-bold text-brand-heading mb-2;
+  }
+  .section-sub {
+    @apply text-brand-mute text-base md:text-lg max-w-2xl;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-slate-100;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400;
+}
