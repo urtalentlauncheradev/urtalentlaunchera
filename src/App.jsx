@@ -11,6 +11,7 @@ import AssignmentsSupport from './pages/AssignmentsSupport'
 import Classes from './pages/Classes'
 import StudyPlan from './pages/StudyPlan'
 import Contact from './pages/Contact'
+import Programs from './pages/Programs'
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/classes" element={<Classes />} />
         <Route path="/study-plan" element={<StudyPlan />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/programs" element={<Programs />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>

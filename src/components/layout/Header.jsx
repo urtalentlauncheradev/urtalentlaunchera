@@ -17,6 +17,7 @@ const navItems = [
       { path: '/study-plan', label: 'Study Plan' },
     ],
   },
+  { path: '/programs', label: 'Programs' },
   { path: '/contact', label: 'Contact' },
 ]
 
@@ -24,7 +25,7 @@ function NavLink({ item, isActive }) {
   if (item.children) {
     return (
       <div className="relative group">
-        <button className="flex items-center gap-1 text-slate-600 hover:text-brand-primary transition-colors py-2">
+        <button className="flex items-center gap-1 whitespace-nowrap text-slate-600 hover:text-brand-primary transition-colors py-2">
           {item.label}
           <ChevronDown className="w-4 h-4" />
         </button>
@@ -67,12 +68,12 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-18">
           <Link to="/" className="flex items-center gap-2">
-            <span className="text-xl md:text-2xl font-bold text-brand-heading">
+            <span className="text-lg md:text-xl font-bold text-brand-heading">
               U R <span className="text-brand-primary">Talent</span> Launchera
             </span>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-5">
             {navItems.map((item) =>
               item.path ? (
                 <NavLink key={item.path} item={item} isActive={isActive(item.path)} />
