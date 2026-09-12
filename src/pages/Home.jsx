@@ -9,6 +9,7 @@ import {
   Linkedin as LinkedinIcon,
   ArrowRight,
   Check,
+  Video
 } from 'lucide-react'
 import Section from '../components/ui/Section'
 import Card from '../components/ui/Card'
@@ -77,8 +78,9 @@ export default function Home() {
               Sign Up
               <ArrowRight className="w-5 h-5" />
             </Link> */}
-            <Link to="/contact" className="btn-outline px-8 py-3.5 inline-flex items-center gap-2">
-              Share Your CV – We Will Call You
+            <Link to="/Programs" className="btn-outline px-8 py-3.5 inline-flex items-center gap-2">
+              <Video className="w-5 h-5" />
+              Book a Demo Call with us
             </Link>
           </motion.div>
         </div>
