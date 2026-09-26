@@ -11,6 +11,7 @@ import {
 } from 'lucide-react'
 import PageHero from '../components/ui/PageHero'
 import Section from '../components/ui/Section'
+import { googleFormUrl } from '../Constants'
 
 const trialHighlights = [
   { icon: Video, text: '30–45 minute live session' },
@@ -85,7 +86,7 @@ export default function Pricing() {
         </div>
         <div className="mt-8">
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSd3KlavzBjhYBeLuyY8XnDfQtMKC1m8S6zxrFOxTByF9gxe-Q/viewform?usp=publish-editor"
+            href={googleFormUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary inline-flex items-center gap-2"
@@ -151,7 +152,7 @@ export default function Pricing() {
 
         <div className="mt-12 text-center">
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSd3KlavzBjhYBeLuyY8XnDfQtMKC1m8S6zxrFOxTByF9gxe-Q/viewform?usp=publish-editor"
+            href={googleFormUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary inline-flex items-center gap-2"
