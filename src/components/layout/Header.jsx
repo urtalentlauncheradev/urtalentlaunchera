@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ChevronDown } from 'lucide-react'
+import fulllogoWord from "../../assets/images/full-logo.png"
 
 const navItems = [
   { path: '/', label: 'Home' },
@@ -67,9 +68,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-18">
           <Link to="/" className="flex items-center gap-2">
-            <span className="text-xl md:text-2xl font-bold text-brand-heading">
-              U R <span className="text-brand-primary">Talent</span> Launchera
-            </span>
+            <img src={fulllogoWord} alt="U R Talent Launchera" className="h-11 md:h-12 w-auto" />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-8">

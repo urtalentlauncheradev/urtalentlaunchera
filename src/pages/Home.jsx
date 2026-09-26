@@ -13,6 +13,8 @@ import {
 } from 'lucide-react'
 import Section from '../components/ui/Section'
 import Card from '../components/ui/Card'
+import { QRCodeSVG } from 'qrcode.react'
+import { googleFormUrl } from '../Constants'
 
 const services = [
   { icon: MessageCircle, title: 'Interview Training', path: '/interview-preparation' },
@@ -51,7 +53,7 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-brand-heading mb-4 md:mb-6 leading-tight"
           >
-            Struggling with Job{' '}
+            Struggling with Job{" "}
             <span className="text-brand-primary relative">
               Interviews?
               <span className="absolute -bottom-1 left-0 right-0 h-1 bg-brand-primary/30 rounded-full" />
@@ -63,13 +65,16 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl md:text-2xl text-brand-mute mb-8 md:mb-10 max-w-2xl mx-auto"
           >
-            We Help You <span className="text-brand-primary font-semibold">Nail The Job!</span>
+            We Help You{" "}
+            <span className="text-brand-primary font-semibold">
+              Nail The Job!
+            </span>
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-wrap items-center justify-center gap-4"
+            className="flex flex-col items-center justify-center gap-4"
           >
             {/* <Link to="/login" className="btn-ghost px-6 py-3.5">
               Login
@@ -78,10 +83,22 @@ export default function Home() {
               Sign Up
               <ArrowRight className="w-5 h-5" />
             </Link> */}
-            <Link to="/Programs" className="btn-outline px-8 py-3.5 inline-flex items-center gap-2">
+            <Link
+              to="/programs"
+              className="btn-outline px-8 py-3.5 inline-flex items-center gap-2"
+            >
               <Video className="w-5 h-5" />
               Book a Demo Call with us
             </Link>
+
+            <div className="flex flex-col items-center gap-2">
+              <div className="bg-white p-3 rounded-lg border border-brand-border inline-block">
+                <QRCodeSVG value={googleFormUrl} size={240} />
+              </div>
+              <p className="text-brand-mute text-s">
+                Scan to register for Demo Class
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -99,7 +116,7 @@ export default function Home() {
                 key={s.title}
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-40px' }}
+                viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.4, delay: i * 0.05 }}
               >
                 <Link to={s.path} className="block group">
@@ -135,7 +152,7 @@ export default function Home() {
               key={b}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-40px' }}
+              viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
               className="card flex items-start gap-4"
             >
@@ -145,12 +162,12 @@ export default function Home() {
               <div>
                 <h3 className="font-semibold text-brand-heading">{b}</h3>
                 <p className="text-brand-mute text-sm mt-1">
-                  {b === 'Personalized Interview Coaching' &&
-                    'One-on-one mock interviews and feedback to build confidence.'}
-                  {b === 'Professional Resume Writing' &&
-                    'ATS-friendly resumes that get you shortlisted.'}
-                  {b === 'LinkedIn Profile Updates' &&
-                    'Profile optimization to attract recruiters.'}
+                  {b === "Personalized Interview Coaching" &&
+                    "One-on-one mock interviews and feedback to build confidence."}
+                  {b === "Professional Resume Writing" &&
+                    "ATS-friendly resumes that get you shortlisted."}
+                  {b === "LinkedIn Profile Updates" &&
+                    "Profile optimization to attract recruiters."}
                 </p>
               </div>
             </motion.div>
@@ -163,5 +180,5 @@ export default function Home() {
         </div>
       </Section>
     </>
-  )
+  );
 }
